@@ -1,0 +1,24 @@
+<DataTemplate x:Key="ProductInfoTemplate">
+				<ViewCell>
+          			<ViewCell.View>
+	          			<Grid 	RowSpacing="5" ColumnSpacing="5" BackgroundColor="White"
+	          					HeightRequest="150" WidthRequest="150" 
+      						 	HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+      						 <Grid.RowDefinitions>
+      						 	<RowDefinition Height="*" />
+      						 	<RowDefinition Height="Auto" />
+      						 	<RowDefinition Height="Auto"/>
+      						 	<RowDefinition Height="Auto" />
+      						 </Grid.RowDefinitions>
+      						 <Grid.ColumnDefinitions>
+      						 	<ColumnDefinition Width="*" />
+      						 	<ColumnDefinition Width="*" />
+      						 </Grid.ColumnDefinitions>
+							<Image Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding ImageUri}" WidthRequest="36" HeightRequest="36" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+							<BoxView Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+							<Label Grid.Row="2" Grid.Column="0" Text="{Binding Price}" XAlign="Center" YAlign="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+							<Label Grid.Row="2" Grid.Column="1" Text="{Binding ListPrice}" Font="8" XAlign="Center" YAlign="Center" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center" />
+						</Grid>
+					</ViewCell.View>
+		        </ViewCell>
+	        </DataTemplate>
